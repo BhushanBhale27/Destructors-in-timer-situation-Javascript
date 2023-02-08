@@ -1,0 +1,24 @@
+class MyObject {
+  constructor() {
+    this.timer = setInterval(...);
+  }
+  
+  stopTimer() {
+    clearInterval(this.timer);
+  }
+}
+
+let obj = new MyObject();
+
+// ...
+
+obj.stopTimer();
+obj = null;
+
+
+
+//By explicitly stopping the timer and setting the obj variable to null, 
+//you can ensure that the resources held by the MyObject instance are released.
+
+//Note that in practice, you usually don't need to worry about releasing resources in JavaScript, 
+//as the garbage collector will automatically reclaim the memory used by objects that are no longer needed.
